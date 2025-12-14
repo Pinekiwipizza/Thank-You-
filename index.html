@@ -12,9 +12,28 @@
     <div class="message">thank you :)</div>
 
     <!-- Music button -->
-    <button id="music-btn">❤️</button>
+    <button id="music-btn">Play Music</button>
+
+    <!-- Background music -->
     <audio id="bg-music" src="euphoria.mp3" loop></audio>
 
+    <!-- JavaScript -->
     <script src="script.js"></script>
+    <script>
+        const music = document.getElementById("bg-music");
+        music.volume = 0.2; // soft volume
+
+        const btn = document.getElementById("music-btn");
+        btn.addEventListener("click", () => {
+            if (music.paused) {
+                music.play();
+                btn.textContent = "Pause Music";
+            } else {
+                music.pause();
+                btn.textContent = "Play Music";
+            }
+        });
+    </script>
+
 </body>
 </html>
