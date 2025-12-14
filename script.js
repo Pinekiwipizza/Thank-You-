@@ -1,7 +1,7 @@
 // Function to create a heart
 function createHeart() {
     const heart = document.createElement("div");
-    heart.innerHTML = "❤️";
+    heart.innerHTML = "💞";
     heart.classList.add("heart");
 
     // Random position
@@ -19,3 +19,4 @@ function createHeart() {
 
 // Create a new heart every 300ms
 setInterval(createHeart, 300);
+
